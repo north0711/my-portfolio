@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- スマートフォンでも正しく表示するための設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trivia | My Portfolio</title>
+
+    <!-- すべてのページで共通のCSSを読み込む -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+    <header class="site-header">
+        <h1>My Portfolio Website</h1>
+        <p>Welcome to My Profolio Website.This is a website for the 'Introduction to Information Systems Engineering' course at Ritsumeikan University.</p>
+    </header>
+
+
+    <!-- =========================
+         ナビゲーションメニュー
+    ========================== -->
+    <nav class="navbar" aria-label="メインメニュー">
+        <ul>
+            <li>
+                <a href="index.html" class="active">HOME</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">MY PORTFOLIO</a>
+            </li>
+
+            <li>
+                <a href="trivia.html" class="active">MY TRIVIA</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         3列のメインレイアウト
+    ========================== -->
+    <div class="page-layout">
+
+
+        <!-- 左側：Useful Links -->
+        <aside class="left-sidebar">
+            <h2>Useful Links</h2>
+
+         <ul class="useful-links">
+
+    <li>
+        <a href="https://www.ritsumei.ac.jp/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Ritsumeikan University
+        </a>
+    </li>
+
+    <li>
+        <a href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            GitHub
+        </a>
+    </li>
+
+    <li>
+        <a href="https://scholar.google.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Google Scholar
+        </a>
+    </li>
+
+    <li>
+        <a href="https://notebooklm.google.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            NotebookLM
+        </a>
+    </li>
+
+</ul>
+        </aside>
+
+
+        <!-- 中央：ホームページのメイン内容 -->
+        <main class="main-content">
+
+            <section class="profile-section">
+                <h2>About Me</h2>
+<div class="profile-container">
+
+    <div class="profile-images">
+        <img src="image1.jpg" alt="in Malaysia" class="profile-image">
+        <img src="image2.jpg" alt="in Corea" class="profile-image">
+    </div>
+
+   
+
+</div>
+                
+ <div class="profile-text">
+        <p>
+Nice to meet you. I'm a senior majoring in Information Science and Engineering at Ritsumeikan University. 
+        </p>
+
+        <p>
+I'm originally from the Kansai region of Japan. In junior high school, I was in the brass band and played an instrument called the euphonium. Then, I went to an all-girls high school, where I joined the calligraphy club.
+        </p>
+    </div>
+                
+            </section>
+
+
+            <section>
+                <h2>My Interests</h2>
+
+                <ul>
+                    <li>Cross-cultural communication</li>
+                    <li>Culture overseas</li>
+                    <li>Music</li>
+                    <li>Traveling</li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h2>My Goal at Ritsumeikan</h2>
+
+                <p>
+My goal is to leverage the information technology I learned at university to design systems that make people's lives and communication more convenient.
+                </p>
+            </section>
+
+
+            <section>
+                <h2>My Hobbies</h2>
+My hobbies include listening to music, traveling, watching movies and videos, and exploring nature. Lately, I'm really into playing 'Overcooked' on Nintendo Switch with my family and friends."
+                <p>
+
+                </p>
+            </section>
+
+        </main>
+
+
+        <!-- 右側：Contact Me -->
+        <aside class="right-sidebar">
+            <h2>Contact Me</h2>
+
+            <form id="contact-form" novalidate>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="名前を入力してください"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="メッセージを入力してください"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button type="submit">
+                    Send
+                </button>
+
+                <!-- JavaScriptによる結果表示欄 -->
+                <p id="form-message" aria-live="polite"></p>
+
+            </form>
+        </aside>
+
+    </div>
+
+
+    <!-- =========================
+         フッター
+    ========================== -->
+    <footer class="site-footer">
+
+        <p>Created: July 2026</p>
+
+        <p>
+            <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <span aria-hidden="true"> | </span>
+
+            <a
+                href="https://www.ritsumei.ac.jp/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Ritsumeikan University
+            </a>
+        </p>
+
+    </footer>
+
+
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

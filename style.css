@@ -1,0 +1,398 @@
+/* =========================
+   全体の基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f9;
+    color: #333333;
+}
+
+a {
+    color: #2c5f8a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+.site-header {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #dceaf4;
+}
+
+.site-header h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.site-header p {
+    margin: 0;
+    color: #555555;
+}
+
+
+/* =========================
+   ナビゲーション
+========================= */
+
+.navbar {
+    background-color: #385f77;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar a {
+    display: block;
+    padding: 15px 24px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #27495d;
+}
+
+
+/* =========================
+   3列レイアウト
+========================= */
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 280px;
+    gap: 20px;
+    width: min(1200px, 94%);
+    margin: 30px auto;
+    align-items: start;
+}
+
+
+/* =========================
+   左右のサイドバー
+========================= */
+
+.left-sidebar,
+.right-sidebar {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.left-sidebar h2,
+.right-sidebar h2 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dceaf4;
+    font-size: 1.2rem;
+}
+
+.useful-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.useful-links li {
+    margin-bottom: 12px;
+}
+
+.useful-links a {
+    display: block;
+    padding: 10px;
+    background-color: #eef5f8;
+    border-radius: 6px;
+}
+
+.useful-links a:hover {
+    background-color: #dceaf4;
+    text-decoration: none;
+}
+
+
+/* =========================
+   メインコンテンツ
+========================= */
+
+.main-content {
+    padding: 28px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.main-content section {
+    margin-bottom: 35px;
+}
+
+.main-content section:last-child {
+    margin-bottom: 0;
+}
+
+.main-content h2 {
+    padding-left: 12px;
+    border-left: 5px solid #6ea0bf;
+    color: #27495d;
+}
+
+
+/* =========================
+   プロフィール部分
+========================= */
+
+.profile-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.profile-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+
+/* =========================
+   お問い合わせフォーム
+========================= */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #9fc4d9;
+    border-color: #6ea0bf;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 11px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #385f77;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27495d;
+}
+
+#form-message {
+    min-height: 24px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+.site-footer {
+    padding: 22px;
+    text-align: center;
+    background-color: #dceaf4;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   タブレット・スマホ対応
+========================= */
+
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-content {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .left-sidebar {
+        grid-column: 1;
+    }
+
+    .right-sidebar {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content,
+    .left-sidebar,
+    .right-sidebar {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    .site-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================
+   Portfolioの表
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.portfolio-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.portfolio-table th,
+.portfolio-table td {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    text-align: left;
+    vertical-align: top;
+}
+
+.portfolio-table th {
+    color: #ffffff;
+    background-color: #385f77;
+}
+
+.portfolio-table tbody tr:nth-child(even) {
+    background-color: #eef5f8;
+}
+
+.portfolio-table tbody tr:hover {
+    background-color: #dceaf4;
+}
+
+.portfolio-table a {
+    font-weight: bold;
+}
+
+
+/* =========================
+   BMI Calculator
+========================= */
+
+.bmi-calculator {
+    max-width: 500px;
+    margin: 25px auto 0;
+    padding: 25px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f7fafc;
+}
+
+.bmi-calculator input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.bmi-calculator button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #385f77;
+    cursor: pointer;
+}
+
+.bmi-calculator button:hover {
+    opacity: 0.85;
+}
+
+.bmi-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #eaf2f7;
+    text-align: center;
+}
+
+#bmi-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+}

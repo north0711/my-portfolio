@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- スマートフォンでも正しく表示するための設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | My Portfolio</title>
+
+    <!-- すべてのページで共通のCSSを読み込む -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+    <header class="site-header">
+        <h1>My Portfolio Website</h1>
+        <p>Welcome to My Profolio Website.This is a website for the 'Introduction to Information Systems Engineering' course at Ritsumeikan University.</p>
+    </header>
+
+
+    <!-- =========================
+         ナビゲーションメニュー
+    ========================== -->
+    <nav class="navbar" aria-label="メインメニュー">
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html" class="active">MY PORTFOLIO</a>
+            </li>
+
+            <li>
+                <a href="trivia.html">MY TRIVIA</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         3列のメインレイアウト
+    ========================== -->
+    <div class="page-layout">
+
+
+        <!-- 左側：Useful Links -->
+        <aside class="left-sidebar">
+            <h2>Useful Links</h2>
+
+            <ul class="useful-links">
+
+    <li>
+        <a href="https://www.ritsumei.ac.jp/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Ritsumeikan University
+        </a>
+    </li>
+
+    <li>
+        <a href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            GitHub
+        </a>
+    </li>
+
+    <li>
+        <a href="https://scholar.google.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Google Scholar
+        </a>
+    </li>
+
+    <li>
+        <a href="https://notebooklm.google.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            NotebookLM
+        </a>
+    </li>
+
+</ul>
+        </aside>
+
+
+<main class="main-content">
+
+    <section>
+        <h2>Portfolio</h2>
+
+        <p>
+            The following is an introduction to the academic coursework and research I have focused on during my university studies.
+
+        <div class="table-wrapper">
+            <table class="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Won the Asahi Shimbun Award at a Calligraphy Competition</td>
+                        <td>
+                            Awarded the prestigious Asahi Shimbun Special Prize at the "Kashihara Kakizome Competition" held in Nara Prefecture when I was in the 6th grade.
+                        </td>
+                        <td>2016</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Part-Time Operations Leader / Crew at Akindo Sushiro Co., Ltd.</td>
+                        <td>
+                            Achieved a record-breaking single-day sales total of 3.3 million yen through strong teamwork, marking the highest daily sales in the store's history and ranking 2nd across all branches in Nara Prefecture. I continue to contribute to this fast-paced environment.
+                        </td>
+                        <td>2025</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Volunteer Support for Deaf and Hard-of-Hearing Youth</td>
+                        <td>
+                           Organized and facilitated counseling sessions for deaf and hard-of-hearing junior high and high school students to address their academic and career concerns. Additionally, hosted seminars and support sessions tailored for their parents.
+                        </td>
+                        <td>2023</td>
+                       
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Private Tutor for Student Reintegration and Academic Success</td>
+                        <td>
+                           Supported a junior high school student who was struggling with truancy (refusing to go to school). By providing dedicated academic and emotional mentorship, I helped them successfully return to school and pass the entrance exam for their first-choice high school.
+                        </td>
+                        <td>2025</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Obtained a Standard Motor Vehicle Driver's License</td>
+                        <td>
+                        Successfully obtained my driver's license through a dynamic, intensive training camp in Yamagata Prefecture, balancing rigorous practice with appreciating the region's rich nature and local produce.
+                        </td>
+                        <td>2025</td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+</main>
+
+        <!-- 右側：Contact Me -->
+        <aside class="right-sidebar">
+            <h2>Contact Me</h2>
+
+            <form id="contact-form" novalidate>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="名前を入力してください"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="メッセージを入力してください"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button type="submit">
+                    Send
+                </button>
+
+                <!-- JavaScriptによる結果表示欄 -->
+                <p id="form-message" aria-live="polite"></p>
+
+            </form>
+        </aside>
+
+    </div>
+
+
+    <!-- =========================
+         フッター
+    ========================== -->
+    <footer class="site-footer">
+
+        <p>Created: July 2026</p>
+
+        <p>
+            <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <span aria-hidden="true"> | </span>
+
+            <a
+                href="https://www.ritsumei.ac.jp/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Ritsumeikan University
+            </a>
+        </p>
+
+    </footer>
+
+
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
